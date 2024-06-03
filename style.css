@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  list-style-type: none;
+}
+body {
+  height: auto;
+  width: 100%;
+    background: #d9e5f0;
+}
+/* entire page: container */
+.container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  padding: 1rem 0;
+}
+.container h1 {
+  font-size: 2rem;
+}
+
+/* div for cards */
+.cardholder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+  margin: 2rem 0;
+  position: relative;
+}
+
+/* target each card in the div */
+.cardholder .card {
+  height: 450px;
+  width: 300px;
+  padding: 2rem;
+  border-radius: 25px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 30px #ffffff;
+  margin: 1.5rem 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+/* first and third card, i.e secondary cards */
+.cardsecondary {
+  /* background: #e0e0e0; */
+  background: #a8d1df;
+}
+
+/* mid card, recommended */
+.cardprimary {
+    background: #57adf0;
+  /* background-color: #2765d6; */
+  position: relative;
+  bottom: 25px;
+  columns: white;
+}
+.card .divcontent h2, .card .divcontent p{
+    position: relative;
+    bottom: 15px;
+}
+.card .divcontent ul li, .card .divcontent h3{
+    line-height: 2rem;
+    position: relative;
+    top: 15px;
+}
+
+/* list markers */
+.card .divcontent ul li::marker{
+    content: " ›  ";
+}
+.cardprimary .divcontent ul li::marker{
+    content: " ✓  ";
+}
+
+/* primary card recommended */
+.card .recommended{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    background-color: #2765d6;
+    text-align: center;
+    border-radius:  0 0 25px 25px;
+    align-content: center;
+    color: #fff; 
+
+}
+h3{
+    margin-top: 10px;
+}
+
+/* custom button css */
+
+.button-4 {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+/* primary button css */
+.btn{
+    background-color: #ffb02e;
+}
+.btn:hover{
+      text-decoration: none;
+  transition-duration: 0.1s;
+  background-color: #eb9f23;
+}
+
+
+/* media query */
+
+@media (max-width: 1000px) {
+    .cardprimary{
+        top: 0;
+    }
+}
